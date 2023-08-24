@@ -1,0 +1,1246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Earn My Travel</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/animate.min.css" rel="stylesheet">
+     <link href="css/jquery-ui.css" rel="stylesheet">
+      <link href="css/slick.css" rel="stylesheet">
+      <link href="css/slick-theme.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
+      <link href="css/default.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+   
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><img src="images/earn-my-travel-logo.jpg" ></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="flight.html">Flight</a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">My Account</a>
+         <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+<div class="modify-wrap pt-4 pb-4" id="search-display">
+     	<div class="list-top-mob">
+        	<div class="container">
+        	<div class="row">
+            	<div class="col-9">
+                	<div class="list-info"><span>532</span> flights in 8s</div>
+                </div>
+                <div class="col-3">
+                	<div class="row mt-1">
+                    	<div class="col-6 pt-2"><div id="fltr-m-btn" class="filter-mob-btn text-center"><img src="images/filters-icon-white.svg" class="img-fluid"></div></div>
+                        <div class="col-6 pt-1"><div id="edit-m-btn" class="filter-mob-btn text-center"><img src="images/edit-button.svg" class="img-fluid"></div></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+     	<div class="container" >
+        	<div class="modifysearch-con p-3 shadow" id="mob-msearch">
+        	<div class="row g-1">
+        	<div class="col-sm-5">
+            	<div class="row g-1">
+                	<div class="col-sm-6">
+                    	<label class="mb-1"><strong>Flying from</strong></label>
+                        <input name="" type="text" class="form-control" placeholder="New Delhi" disabled style="cursor:pointer;">
+                       
+                    </div>
+                    <div class="col-sm-6">
+                    	<label class="mb-1"><strong>Flying to</strong></label>
+                       <input name="" type="text" class="form-control" placeholder="Bangalore" disabled style="cursor:pointer;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+            	<div class="row g-1">
+                	<div class="col-sm-3 col-sm-6" id="depart">
+                    	<label class="mb-1"><strong>Depart</strong></label>
+                        <input name="" class="form-control cal-icon form_bg_none_cum ng-pristine ng-valid ng-touched" placeholder="Oct 16, 2022" type="text" disabled style="cursor:pointer;">
+                    </div>
+                    <div class="col-sm-3" id="return" style="display: none;">
+                    	<label class="mb-1"><strong>Return</strong></label>
+                        <input name="" class="form-control cal-icon form_bg_none_cum ng-pristine ng-valid ng-touched" placeholder="Date" type="text">
+                    </div>
+                    <div class="col-sm-6">
+                    	<div class="traveller-wrap">
+                    	<label class="mb-1"><strong>Travellers &amp; Class</strong></label>
+                        <input name="" class="form-control traveller-icon form_bg_none_cum ng-pristine ng-valid ng-touched" style="caret-color: transparent; cursor:pointer;" readonly id="trav-click" placeholder="2 Adults, 1 Child" type="text" disabled>
+                        <div class="traveller-pop">
+                        	<div class="row g-1">
+                            	<div class="col-4">
+                                	<label class="mb-1"><strong>Adults</strong></label>
+                                     <select class="form-control mb-3">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                	<label class="mb-1"><strong>Children</strong></label>
+                                     <select class="form-control">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                	<label class="mb-1"><strong>Infants</strong></label>
+                                     <select class="form-control">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                            </div>
+                        	<label class="mb-1"><strong>Class</strong></label>
+                       
+                                    <select class="form-control" data-val="true" data-val-required="Please Select Class" id="ddl_class" name="Class"><option selected="selected" value="Y">Economy</option>
+                                        <option value="W">Premium Economy</option>
+                                        <option value="C">Business</option>
+                                        <option value="F">First Class</option>
+                                    </select>
+                            <a class="nav-link btn btn-sm blue-bg text-white pt-1 pb-1 rounded-3 mt-2 mb-3" id="trav-submit" href="#">Submit</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2"><button class="btn global-btn d-block w-100" id="m-but" style="margin-top:27px;">Modify Search</button></div>
+        </div>
+       		 </div>
+        </div>
+        
+     </div>
+
+   <div class="modify-wrap pt-4 position-relative pb-4" style="display:none;" id="search-edit">
+     	<div class="close-btn"><img src="images/close.svg" class="img-fluid"></div>
+     	<div class="container">
+   		<div class="modifysearch-con p-3 " id="msearch-con">
+    	<div class="row search-toggle mb-2 m-0">
+    		<ul>
+            	<li class="active"><a href="#" id="oneway">Oneway</a></li>
+                <li><a href="#" id="roundtrip">Roundtrip</a></li>
+               <!-- <li><a href="#" id="multicity">Multicity</a></li>-->
+            </ul>
+       </div>
+    	<div class="row g-1">
+        	<div class="col-sm-5">
+            	<div class="row g-1">
+                	<div class="col-sm-6">
+                    	<label class="mb-1"><strong>Flying from</strong></label>
+                        <input name="" type="text" class="form-control" placeholder="From City / Airport">
+                       
+                    </div>
+                    <div class="col-sm-6">
+                    	<label class="mb-1"><strong>Flying to</strong></label>
+                       <input name="" type="text" class="form-control" placeholder="To City / Airport">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+            	<div class="row g-1">
+                	<div class="col-sm-3 col-sm-6" id="depart">
+                    	<label class="mb-1"><strong>Depart</strong></label>
+                        <input name="" class="form-control cal-icon form_bg_none_cum ng-pristine ng-valid ng-touched" placeholder="Date" type="text">
+                    </div>
+                    <div class="col-sm-3" id="return" style="display: none;">
+                    	<label class="mb-1"><strong>Return</strong></label>
+                        <input name="" class="form-control cal-icon form_bg_none_cum ng-pristine ng-valid ng-touched" placeholder="Date" type="text">
+                    </div>
+                    <div class="col-sm-6">
+                    	<div class="traveller-wrap">
+                    	<label class="mb-1"><strong>Travellers &amp; Class</strong></label>
+                        <input name="" class="form-control traveller-icon form_bg_none_cum ng-pristine ng-valid ng-touched" style="caret-color: transparent; cursor:pointer;" readonly id="trav-click" placeholder="Travellers" type="text">
+                        <div class="traveller-pop">
+                        	<div class="row g-1">
+                            	<div class="col-4">
+                                	<label class="mb-1"><strong>Adults</strong></label>
+                                     <select class="form-control mb-3">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                	<label class="mb-1"><strong>Children</strong></label>
+                                     <select class="form-control">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                	<label class="mb-1"><strong>Infants</strong></label>
+                                     <select class="form-control">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                            </div>
+                        	<label class="mb-1"><strong>Class</strong></label>
+                       
+                                    <select class="form-control" data-val="true" data-val-required="Please Select Class" id="ddl_class" name="Class"><option selected="selected" value="Y">Economy</option>
+                                        <option value="W">Premium Economy</option>
+                                        <option value="C">Business</option>
+                                        <option value="F">First Class</option>
+                                    </select>
+                            <a class="nav-link btn btn-sm blue-bg text-white pt-1 pb-1 rounded-3 mt-2 mb-3" id="trav-submit" href="#">Submit</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2"><button class="btn global-btn d-block w-100" style="margin-top:27px;">Search Flights</button></div>
+        </div>
+        
+        <div id="mc-2" style="display: none;">
+        	<div class="row g-1 mt-3">
+        	<div class="col-sm-5">
+            	<div class="row g-1">
+                	<div class="col-sm-6">
+                    	<label class="mb-1"><strong>Flying from</strong></label>
+                        <select class="form-control flight-icon">
+                        	<option>All</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6">
+                    	<label class="mb-1"><strong>Flying to</strong></label>
+                        <select class="form-control flight-icon">
+                        	<option>All</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+            	<div class="row g-1">
+                	<div class="col-sm-6">
+                    	<label class="mb-1"><strong>Depart</strong></label>
+                        <input name="" class="form-control cal-icon form_bg_none_cum ng-pristine ng-valid ng-touched" placeholder="Date" type="text">
+                    </div>
+                    
+                    <div class="col-sm-6">
+                    	<div class="row g-1" id="btn-con-2">
+            	<div class="col-6"><button id="ad-btn-2" class="btn btn-md  text-white blue-bg d-block w-100" style="margin-top:27px; height:45px; padding:11px;">ADD</button> </div>
+                <div class="col-6"></div>
+            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2"> </div>
+        </div>
+        </div>
+        <div id="mc-3" style="display: none;">
+        	<div class="row g-1 mt-3">
+        	<div class="col-sm-5">
+            	<div class="row g-1">
+                	<div class="col-sm-6">
+                    	<label class="mb-1"><strong>Flying from</strong></label>
+                        <select class="form-control flight-icon">
+                        	<option>All</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6">
+                    	<label class="mb-1"><strong>Flying to</strong></label>
+                        <select class="form-control flight-icon">
+                        	<option>All</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+            	<div class="row g-1">
+                	<div class="col-sm-6">
+                    	<label class="mb-1"><strong>Depart</strong></label>
+                        <input name="" class="form-control cal-icon form_bg_none_cum ng-pristine ng-valid ng-touched" placeholder="Date" type="text">
+                    </div>
+                    
+                    <div class="col-sm-6">
+                    	<div class="row g-1" id="btn-con-3">
+                            <div class="col-6"><button id="ad-btn-3" class="btn btn-md  text-white blue-bg d-block w-100" style="margin-top:27px; height:45px; padding:11px;">ADD</button> </div>
+                            <div class="col-6"><button id="rem-btn-3" class="btn btn-md  text-white btn-danger d-block w-100" style="margin-top:27px; height:45px; padding:11px;">REMOVE</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        </div>
+        <div id="mc-4" style="display: none;">
+       		 <div class="row g-1 mt-3">
+        	<div class="col-sm-5">
+            	<div class="row g-1">
+                	<div class="col-sm-6">
+                    	<label class="mb-1"><strong>Flying from</strong></label>
+                        <select class="form-control flight-icon">
+                        	<option>All</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6">
+                    	<label class="mb-1"><strong>Flying to</strong></label>
+                        <select class="form-control flight-icon">
+                        	<option>All</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+            	<div class="row g-1">
+                	<div class="col-sm-6">
+                    	<label class="mb-1"><strong>Depart</strong></label>
+                        <input name="" class="form-control cal-icon form_bg_none_cum ng-pristine ng-valid ng-touched" placeholder="Date" type="text">
+                    </div>
+                    
+                    <div class="col-sm-6">
+                    	<div class="row g-1" id="btn-con-4">
+                            <div class="col-6"><button id="ad-btn-4" class="btn btn-md  text-white blue-bg d-block w-100" style="margin-top:27px; height:45px; padding:11px;">ADD</button> </div>
+                            <div class="col-6"><button id="rem-btn-4" class="btn btn-md  text-white btn-danger d-block w-100" style="margin-top:27px; height:45px; padding:11px;">REMOVE</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+            
+            </div>
+        </div>
+        </div>
+        
+        
+        <div id="mc-5" style="display: none;">
+        	<div class="row g-1 mt-3">
+        	<div class="col-sm-5">
+            	<div class="row g-1">
+                	<div class="col-sm-6">
+                    	<label class="mb-1"><strong>Flying from</strong></label>
+                        <select class="form-control flight-icon">
+                        	<option>All</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6">
+                    	<label class="mb-1"><strong>Flying to</strong></label>
+                        <select class="form-control flight-icon">
+                        	<option>All</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+            	<div class="row g-1">
+                	<div class="col-sm-6">
+                    	<label class="mb-1"><strong>Depart</strong></label>
+                        <input name="" class="form-control cal-icon form_bg_none_cum ng-pristine ng-valid ng-touched" placeholder="Date" type="text">
+                    </div>
+                    
+                    <div class="col-sm-6">
+                    	<div class="row g-1" id="btn-con-5">
+                            <div class="col-6"><button id="rem-btn-5" class="btn btn-md  text-white btn-danger d-block w-100" style="margin-top:27px; height:45px; padding:11px;">REMOVE</button> </div>
+                            <div class="col-6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+            
+            </div>
+        </div>
+        </div>
+        </div>
+        
+    </div>
+     </div>
+
+<section class="bg-light">
+<div class="container pt-4 pb-5">
+
+<div class="row">
+	<div class="col-sm-3">
+    <h5 class="fw-bold">Filter</h5>
+    	<!--Filter starts here-->
+<div class="filter-con border rounded pb-5">
+
+	<div class="filter-row">
+	<div class="row">
+    	<div class="col-8">
+        	<div class="filter-info"><span>532</span> flights in 8s</div>
+        </div>
+        <div class="col-4"><div class="f-clear-but d-flex">Clear <img src="images/clear-icon.svg" class="img-fluid ms-2"></div></div>
+    </div>
+    </div>
+    <div class="filter-inner mCustomScrollbar">
+    <div class="filter-head">Price</div>
+    <div class="filter-row">
+    	<div class="price-range mb-3 clearfix">
+        <div class="row">
+          <div class="col-6">
+            <label for="amount">Price range:</label>
+          </div>
+          <div class="col-6">
+            <input type="text" disabled id="amount" style="border:0; color:#000; font-weight:bold; background-color:transparent" />
+          </div>
+        </div>
+        </div>
+         <div id="slider-range"></div>
+    </div>
+    <div class="filter-head">Stop</div>
+    <div class="filter-row">
+    	<div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+          <label class="form-check-label slabel" for="inlineCheckbox1">0 Stop</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+          <label class="form-check-label slabel" for="inlineCheckbox2">1 Stop</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+          <label class="form-check-label slabel" for="inlineCheckbox3">2 Stop</label>
+        </div>
+    </div>
+     <div class="filter-head">Airlines</div>
+      <div class="filter-row">
+      	<div class="form-check pt-2 pb-2">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label d-block f-airline"  for="defaultCheck1">
+            Air asia <span style="background-image:url(images/airasia-airline.png);"></span>
+          </label>
+        </div>
+        <div class="form-check pt-2 pb-2">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+          <label class="form-check-label d-block f-airline" for="defaultCheck2">
+            GO First<span style="background-image:url(images/go-first-airline.png);"></span>
+          </label>
+        </div>
+        <div class="form-check pt-2 pb-2">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+          <label class="form-check-label d-block f-airline" for="defaultCheck3">
+            Spicejet<span style="background-image:url(images/spicejet-airline.png);"></span>
+          </label>
+        </div>
+        <div class="form-check pt-2 pb-2">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+          <label class="form-check-label d-block f-airline" for="defaultCheck3">
+            Indigo<span style="background-image:url(images/indigo-airline.png);"></span>
+          </label>
+        </div>
+      </div>
+      <div class="filter-head">Departure from <span style="color:#009;">Delhi</span></div>
+      <div class="filter-row">
+      	<div class="form-check pt-2 pb-2">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label d-block f-time"  for="defaultCheck1">
+            Before 6 AM Early Morning<span style="background-image:url(images/early-morning-icon.svg);"></span>
+          </label>
+        </div>
+        <div class="form-check pt-2 pb-2">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+          <label class="form-check-label d-block f-time" for="defaultCheck2">
+            6 AM - 11.59 AM Morning<span style="background-image:url(images/morning-icon.svg);"></span>
+          </label>
+        </div>
+        <div class="form-check pt-2 pb-2">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+          <label class="form-check-label d-block f-time" for="defaultCheck3">
+            12 PM - 6 PM Afternoon<span style="background-image:url(images/afternoon-icon.svg); background-size:20px; background-position:right 3px center;"></span>
+          </label>
+        </div>
+        <div class="form-check pt-2 pb-2">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+          <label class="form-check-label d-block f-time" for="defaultCheck3">
+            6 PM - 6 AM Night<span style="background-image:url(images/night-icon.svg); background-size:20px;"></span>
+          </label>
+        </div>
+      </div>
+      
+      
+      
+      
+ </div>
+ <div class="clearfix"></div>
+</div>
+    </div>
+    <div class="col-sm-9">
+    <div class="row">
+    	<div class="col-10"> <h5 class="fw-bold">Flights from New Delhi to Mumbai</h5></div>
+        <div class="col-2">
+        	<select class="form-control sortfld">
+            	<option>Sort By</option>
+                <option>Departure</option>
+                <option>Duration</option>
+                <option>Arrival</option>
+                <option>Price</option>
+            </select>
+        </div>
+    </div>		
+            
+            
+	<div class="list-row ps-3 pe-3 border rounded">
+    <div class="row">
+   
+   		<div class="col-sm-10 border-end">
+        	<div class="row border-bottom pb-2 pt-3">
+           
+        	<div class="col-sm-3 col-3">
+        	<div class="row">
+            	<div class="col-4 pe-0"><img src="images/6e 1.png" class="img-fluid"></div>
+                <div class="col-8">
+                	<h6 class="fw-bold mb-0">Indigo</h6>
+                 <p class="small mb-0">6E-2009 </p>
+                 </div>
+            </div>
+   	   	
+        </div>
+        
+        	<div class="col-sm-9 col-5 p-0 ">
+      		<div class="row">
+            	<div class="col-2"><h5 class="mb-0 fw-normal">DEL</h5><p class="lead fw-bold mb-0">02:40</p></div>
+                <div class="col-7 text-center"><h6 class="mb-1 fw-normal">Non Stop</h6><p class="lead fw-bold mb-0">02h  10m</p></div>
+                <div class="col-3"><h5 class="mb-0 fw-normal">BOM</h5><p class="lead fw-bold mb-0">04:40</p></div>
+                
+            </div>
+      </div>
+      		
+            </div>
+      
+      		<div class="mob-d-none mt-3 mb-3">
+      	<div class="list-icon-con">
+      		<div class="row">
+            	<div class="col-3">
+                	<div class="row">
+                    	<div class="col-4 pe-0"> <img src="images/money1.svg" class="img-fluid"></div>
+                        <div class="col-8 ps-0 pt-2">Refundable</div>
+                    </div>
+               
+                </div>
+                <div class="col-3">
+                	<div class="row">
+                    	<div class="col-4 pe-0"> <img src="images/seat.svg" class="img-fluid"></div>
+                        <div class="col-8 ps-0 pt-2">4 Seats Left</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                	<div class="row">
+                    	<div class="col-4 pe-0">  <img src="images/bag.svg" class="img-fluid mt-1"></div>
+                        <div class="col-8 ps-0 pt-2">25 Kg</div>
+                    </div>
+               </div>
+                <div class="col-3">
+                	<div class="row">
+                    	<div class="col-4 pe-0">  <img src="images/meals.svg" class="img-fluid"></div>
+                        <div class="col-8 ps-0 pt-2">Meals</div>
+                    </div>
+                </div>
+            </div>
+         </div>
+      </div>
+      
+      		<div class="row border-top pb-2 pt-3">
+           
+        	<div class="col-sm-3 col-3">
+        	<div class="row">
+            	<div class="col-4 pe-0"><img src="images/6e 1.png" class="img-fluid"></div>
+                <div class="col-8">
+                	<h6 class="fw-bold mb-0">Indigo</h6>
+                 <p class="small mb-0">6E-2009 </p>
+                 </div>
+            </div>
+   	   	
+        </div>
+        
+        	<div class="col-sm-9 col-5 p-0 ">
+      		<div class="row">
+            	<div class="col-2"><h5 class="mb-0 fw-normal">BOM</h5><p class="lead fw-bold mb-0">02:40</p></div>
+                <div class="col-7 text-center"><h6 class="mb-1 fw-normal">Non Stop</h6><p class="lead fw-bold mb-0">02h  10m</p></div>
+                <div class="col-3"><h5 class="mb-0 fw-normal">DEL</h5><p class="lead fw-bold mb-0">04:40</p></div>
+                
+            </div>
+      </div>
+      		
+            </div>
+        </div>
+        <div class="col-sm-2 pt-md-5">
+        
+        		
+            	<div class="text-center pt-md-3 pt-0 mb-2">
+                	<h4 class="mb-0 fw-bold"><i class="fa fa-inr" aria-hidden="true"></i> 3,703.00</h4>
+                    <p class="mb-0 small">Coupon</p>
+                </div>
+                <div class="text-center "><a href="#" id="list-drop-btn" class="btn btn-lg mt-1 btn-info border-0 text-white blue-bg rounded">View Fares</a><a href="#" id="ld-btn-hide" class="btn btn-lg mt-1 btn-info border-0 text-white gray-bg rounded" style="display:none;">Hide Fares</a></div>
+                
+            
+        </div>
+   
+    	
+      
+     
+    </div>
+    
+    
+     </div>
+    <div class="list-dtls-drop rounded" style="display:none;"  id="list-drop">
+     	<div class="list-drop-inner bg-white p-3 rounded border">
+     	<div class="row border-bottom list-drop-head pb-2 pt-2">
+        	<div class="col-sm-9 col-11">
+            	<div class="row">
+                	<div class="col-2 col-2 ps-md-2 pe-md-2 ps-2 pe-2 text-center"><div class="drop-icon-con"><img src="images/Group-icon.svg" class="img-fluid"></div><br>Type</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-2 pe-2 text-center"><div class="drop-icon-con"><img src="images/money1.svg" class="img-fluid"></div><br>Refund</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-2 pe-2 text-center"><div class="drop-icon-con"><img src="images/seat.svg" class="img-fluid"></div><br>Seat</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-2 pe-2 text-center"><div class="drop-icon-con"><img src="images/bag.svg" class="img-fluid"></div><br>Baggage</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-2 pe-2 text-center"><div class="drop-icon-con"><img src="images/meals.svg" class="img-fluid"></div><br>Meals</div>
+                </div>
+            </div>
+            
+            <div class="col-sm-3 col-1"></div>
+        </div>
+        <div class="row border-bottom list-drop-row pb-md-2 pb-2 pt-md-3 pt-1">
+        	<div class="col-sm-9 col-9 pe-0">
+            	<div class="row">
+                	<div class="col-sm-2 col-3 ps-md-0 pe-md-2 ps-1 pe-1 text-center fw-bold" style="line-height:18px;"><p class="mb-0">Offer Fare EMT</p></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center pt-2"><center><img src="images/tick.svg" class="img-fluid tick-ico"></center></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">6</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">15 KG</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">N/A</div>
+                </div>
+            </div>
+            
+            <div class="col-sm-3 col-3 p-0">
+            	<div class="row">
+                	<div class="col-sm-6 ps-0">
+                    	<h5 class="mb-0 mt-2 fw-bold"><i class="fa fa-inr" aria-hidden="true"></i> 3,703.00</h5>
+                    </div>
+                    <div class="col-sm-6 ps-0 position-relative"><a href="#" class="btn mt-1 global-btn border-0 text-white blue-bg">Book</a>
+                    <a href="#" data-tooltip="This is a tooltip"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="row border-bottom list-drop-row pb-md-2 pb-2 pt-md-3 pt-1">
+        	<div class="col-sm-9 col-9 pe-0">
+            	<div class="row">
+                	<div class="col-sm-2 col-3 ps-md-0 pe-md-2 ps-1 pe-1 text-center fw-bold" style="line-height:18px;"><p class="mb-0">Coupon</p></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center pt-2"><center><img src="images/tick.svg" class="img-fluid tick-ico"></center></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">6</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">15 KG</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">N/A</div>
+                </div>
+            </div>
+           
+            <div class="col-sm-3 col-3 p-0">
+            	<div class="row">
+                	<div class="col-sm-6 ps-0">
+                    	<h5 class="mb-0 mt-2 fw-bold"><i class="fa fa-inr" aria-hidden="true"></i> 3,703.00</h5>
+                    </div>
+                    <div class="col-sm-6 ps-0 position-relative"><a href="#" class="btn mt-1 global-btn border-0 text-white blue-bg">Book</a>
+                    <a href="#" data-tooltip="This is a tooltip"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="row border-bottom list-drop-row pb-md-2 pb-2 pt-md-3 pt-1">
+        	<div class="col-sm-9 col-9 pe-0">
+            	<div class="row">
+                	<div class="col-sm-2 col-3 ps-md-0 pe-md-2 ps-1 pe-1 text-center fw-bold" style="line-height:18px;"><p class="mb-0">SME</p></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center pt-2"><center><img src="images/tick.svg" class="img-fluid tick-ico"></center></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">6</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">15 KG</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">N/A</div>
+                </div>
+            </div>
+           
+            <div class="col-sm-3 col-3 p-0">
+            	<div class="row">
+                	<div class="col-sm-6 ps-0">
+                    	<h5 class="mb-0 mt-2 fw-bold"><i class="fa fa-inr" aria-hidden="true"></i> 3,703.00</h5>
+                    </div>
+                    <div class="col-sm-6 ps-0 position-relative"><a href="#" class="btn mt-1 global-btn border-0 text-white blue-bg">Book</a>
+                    <a href="#" data-tooltip="This is a tooltip"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="row border-bottom list-drop-row pb-md-2 pb-2 pt-md-3 pt-1">
+        	<div class="col-sm-9 col-9 pe-0">
+            	<div class="row">
+                	<div class="col-sm-2 col-3 ps-md-0 pe-md-2 ps-1 pe-1  text-center fw-bold" style="line-height:18px;"><p class="mb-0">MAIN</p></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center pt-2"><center><img src="images/tick.svg" class="img-fluid tick-ico"></center></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">6</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">15 KG</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">N/A</div>
+                </div>
+            </div>
+           
+            <div class="col-sm-3 col-3 p-0">
+            	<div class="row">
+                	<div class="col-sm-6 ps-0">
+                    	<h5 class="mb-0 mt-2 fw-bold"><i class="fa fa-inr" aria-hidden="true"></i> 3,703.00</h5>
+                    </div>
+                    <div class="col-sm-6 ps-0 position-relative"><a href="#" class="btn mt-1 global-btn border-0 text-white blue-bg">Book</a>
+                    <a href="#" data-tooltip="This is a tooltip"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+        
+     </div>
+     
+     
+   
+</div>
+
+	<div class="list-row ps-3 pe-3 border rounded">
+    <div class="row">
+   
+   		<div class="col-sm-10 border-end">
+        	<div class="row border-bottom pb-2 pt-3">
+           
+        	<div class="col-sm-3 col-3">
+        	<div class="row">
+            	<div class="col-4 pe-0"><img src="images/6e 1.png" class="img-fluid"></div>
+                <div class="col-8">
+                	<h6 class="fw-bold mb-0">Indigo</h6>
+                 <p class="small mb-0">6E-2009 </p>
+                 </div>
+            </div>
+   	   	
+        </div>
+        
+        	<div class="col-sm-9 col-5 p-0 ">
+      		<div class="row">
+            	<div class="col-2"><h5 class="mb-0 fw-normal">DEL</h5><p class="lead fw-bold mb-0">02:40</p></div>
+                <div class="col-7 text-center"><h6 class="mb-1 fw-normal">Non Stop</h6><p class="lead fw-bold mb-0">02h  10m</p></div>
+                <div class="col-3"><h5 class="mb-0 fw-normal">BOM</h5><p class="lead fw-bold mb-0">04:40</p></div>
+                
+            </div>
+      </div>
+      		
+            </div>
+      
+      		<div class="mob-d-none mt-3 mb-3">
+      	<div class="list-icon-con">
+      		<div class="row">
+            	<div class="col-3">
+                	<div class="row">
+                    	<div class="col-4 pe-0"> <img src="images/money1.svg" class="img-fluid"></div>
+                        <div class="col-8 ps-0 pt-2">Refundable</div>
+                    </div>
+               
+                </div>
+                <div class="col-3">
+                	<div class="row">
+                    	<div class="col-4 pe-0"> <img src="images/seat.svg" class="img-fluid"></div>
+                        <div class="col-8 ps-0 pt-2">4 Seats Left</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                	<div class="row">
+                    	<div class="col-4 pe-0">  <img src="images/bag.svg" class="img-fluid mt-1"></div>
+                        <div class="col-8 ps-0 pt-2">25 Kg</div>
+                    </div>
+               </div>
+                <div class="col-3">
+                	<div class="row">
+                    	<div class="col-4 pe-0">  <img src="images/meals.svg" class="img-fluid"></div>
+                        <div class="col-8 ps-0 pt-2">Meals</div>
+                    </div>
+                </div>
+            </div>
+         </div>
+      </div>
+      
+      		<div class="row border-top pb-2 pt-3">
+           
+        	<div class="col-sm-3 col-3">
+        	<div class="row">
+            	<div class="col-4 pe-0"><img src="images/6e 1.png" class="img-fluid"></div>
+                <div class="col-8">
+                	<h6 class="fw-bold mb-0">Indigo</h6>
+                 <p class="small mb-0">6E-2009 </p>
+                 </div>
+            </div>
+   	   	
+        </div>
+        
+        	<div class="col-sm-9 col-5 p-0 ">
+      		<div class="row">
+            	<div class="col-2"><h5 class="mb-0 fw-normal">BOM</h5><p class="lead fw-bold mb-0">02:40</p></div>
+                <div class="col-7 text-center"><h6 class="mb-1 fw-normal">Non Stop</h6><p class="lead fw-bold mb-0">02h  10m</p></div>
+                <div class="col-3"><h5 class="mb-0 fw-normal">DEL</h5><p class="lead fw-bold mb-0">04:40</p></div>
+                
+            </div>
+      </div>
+      		
+            </div>
+        </div>
+        <div class="col-sm-2 pt-md-5">
+        
+        		
+            	<div class="text-center pt-md-3 pt-0 mb-2">
+                	<h4 class="mb-0 fw-bold"><i class="fa fa-inr" aria-hidden="true"></i> 3,703.00</h4>
+                    <p class="mb-0 small">Coupon</p>
+                </div>
+                <div class="text-center "><a href="#" id="list-drop-btn" class="btn btn-lg mt-1 btn-info border-0 text-white blue-bg rounded">View Fares</a><a href="#" id="ld-btn-hide" class="btn btn-lg mt-1 btn-info border-0 text-white gray-bg rounded" style="display:none;">Hide Fares</a></div>
+                
+            
+        </div>
+   
+    	
+      
+     
+    </div>
+    
+    
+     </div>
+    <div class="list-dtls-drop rounded" style="display:none;"  id="list-drop">
+     	<div class="list-drop-inner bg-white p-3 rounded border">
+     	<div class="row border-bottom list-drop-head pb-2 pt-2">
+        	<div class="col-sm-9 col-11">
+            	<div class="row">
+                	<div class="col-2 col-2 ps-md-2 pe-md-2 ps-2 pe-2 text-center"><div class="drop-icon-con"><img src="images/Group-icon.svg" class="img-fluid"></div><br>Type</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-2 pe-2 text-center"><div class="drop-icon-con"><img src="images/money1.svg" class="img-fluid"></div><br>Refund</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-2 pe-2 text-center"><div class="drop-icon-con"><img src="images/seat.svg" class="img-fluid"></div><br>Seat</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-2 pe-2 text-center"><div class="drop-icon-con"><img src="images/bag.svg" class="img-fluid"></div><br>Baggage</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-2 pe-2 text-center"><div class="drop-icon-con"><img src="images/meals.svg" class="img-fluid"></div><br>Meals</div>
+                </div>
+            </div>
+            
+            <div class="col-sm-3 col-1"></div>
+        </div>
+        <div class="row border-bottom list-drop-row pb-md-2 pb-2 pt-md-3 pt-1">
+        	<div class="col-sm-9 col-9 pe-0">
+            	<div class="row">
+                	<div class="col-sm-2 col-3 ps-md-0 pe-md-2 ps-1 pe-1 text-center fw-bold" style="line-height:18px;"><p class="mb-0">Offer Fare EMT</p></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center pt-2"><center><img src="images/tick.svg" class="img-fluid tick-ico"></center></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">6</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">15 KG</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">N/A</div>
+                </div>
+            </div>
+            
+            <div class="col-sm-3 col-3 p-0">
+            	<div class="row">
+                	<div class="col-sm-6 ps-0">
+                    	<h5 class="mb-0 mt-2 fw-bold"><i class="fa fa-inr" aria-hidden="true"></i> 3,703.00</h5>
+                    </div>
+                    <div class="col-sm-6 ps-0 position-relative"><a href="#" class="btn mt-1 global-btn border-0 text-white blue-bg">Book</a>
+                    <a href="#" data-tooltip="This is a tooltip"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="row border-bottom list-drop-row pb-md-2 pb-2 pt-md-3 pt-1">
+        	<div class="col-sm-9 col-9 pe-0">
+            	<div class="row">
+                	<div class="col-sm-2 col-3 ps-md-0 pe-md-2 ps-1 pe-1 text-center fw-bold" style="line-height:18px;"><p class="mb-0">Coupon</p></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center pt-2"><center><img src="images/tick.svg" class="img-fluid tick-ico"></center></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">6</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">15 KG</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">N/A</div>
+                </div>
+            </div>
+           
+            <div class="col-sm-3 col-3 p-0">
+            	<div class="row">
+                	<div class="col-sm-6 ps-0">
+                    	<h5 class="mb-0 mt-2 fw-bold"><i class="fa fa-inr" aria-hidden="true"></i> 3,703.00</h5>
+                    </div>
+                    <div class="col-sm-6 ps-0 position-relative"><a href="#" class="btn mt-1 global-btn border-0 text-white blue-bg">Book</a>
+                    <a href="#" data-tooltip="This is a tooltip"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="row border-bottom list-drop-row pb-md-2 pb-2 pt-md-3 pt-1">
+        	<div class="col-sm-9 col-9 pe-0">
+            	<div class="row">
+                	<div class="col-sm-2 col-3 ps-md-0 pe-md-2 ps-1 pe-1 text-center fw-bold" style="line-height:18px;"><p class="mb-0">SME</p></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center pt-2"><center><img src="images/tick.svg" class="img-fluid tick-ico"></center></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">6</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">15 KG</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">N/A</div>
+                </div>
+            </div>
+           
+            <div class="col-sm-3 col-3 p-0">
+            	<div class="row">
+                	<div class="col-sm-6 ps-0">
+                    	<h5 class="mb-0 mt-2 fw-bold"><i class="fa fa-inr" aria-hidden="true"></i> 3,703.00</h5>
+                    </div>
+                    <div class="col-sm-6 ps-0 position-relative"><a href="#" class="btn mt-1 global-btn border-0 text-white blue-bg">Book</a>
+                    <a href="#" data-tooltip="This is a tooltip"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="row border-bottom list-drop-row pb-md-2 pb-2 pt-md-3 pt-1">
+        	<div class="col-sm-9 col-9 pe-0">
+            	<div class="row">
+                	<div class="col-sm-2 col-3 ps-md-0 pe-md-2 ps-1 pe-1  text-center fw-bold" style="line-height:18px;"><p class="mb-0">MAIN</p></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center pt-2"><center><img src="images/tick.svg" class="img-fluid tick-ico"></center></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">6</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">15 KG</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">N/A</div>
+                </div>
+            </div>
+           
+            <div class="col-sm-3 col-3 p-0">
+            	<div class="row">
+                	<div class="col-sm-6 ps-0">
+                    	<h5 class="mb-0 mt-2 fw-bold"><i class="fa fa-inr" aria-hidden="true"></i> 3,703.00</h5>
+                    </div>
+                    <div class="col-sm-6 ps-0 position-relative"><a href="#" class="btn mt-1 global-btn border-0 text-white blue-bg">Book</a>
+                    <a href="#" data-tooltip="This is a tooltip"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+        
+     </div>
+     
+     
+   
+</div>
+
+	<div class="list-row ps-3 pe-3 border rounded">
+    <div class="row">
+   
+   		<div class="col-sm-10 border-end">
+        	<div class="row border-bottom pb-2 pt-3">
+           
+        	<div class="col-sm-3 col-3">
+        	<div class="row">
+            	<div class="col-4 pe-0"><img src="images/6e 1.png" class="img-fluid"></div>
+                <div class="col-8">
+                	<h6 class="fw-bold mb-0">Indigo</h6>
+                 <p class="small mb-0">6E-2009 </p>
+                 </div>
+            </div>
+   	   	
+        </div>
+        
+        	<div class="col-sm-9 col-5 p-0 ">
+      		<div class="row">
+            	<div class="col-2"><h5 class="mb-0 fw-normal">DEL</h5><p class="lead fw-bold mb-0">02:40</p></div>
+                <div class="col-7 text-center"><h6 class="mb-1 fw-normal">Non Stop</h6><p class="lead fw-bold mb-0">02h  10m</p></div>
+                <div class="col-3"><h5 class="mb-0 fw-normal">BOM</h5><p class="lead fw-bold mb-0">04:40</p></div>
+                
+            </div>
+      </div>
+      		
+            </div>
+      
+      		<div class="mob-d-none mt-3 mb-3">
+      	<div class="list-icon-con">
+      		<div class="row">
+            	<div class="col-3">
+                	<div class="row">
+                    	<div class="col-4 pe-0"> <img src="images/money1.svg" class="img-fluid"></div>
+                        <div class="col-8 ps-0 pt-2">Refundable</div>
+                    </div>
+               
+                </div>
+                <div class="col-3">
+                	<div class="row">
+                    	<div class="col-4 pe-0"> <img src="images/seat.svg" class="img-fluid"></div>
+                        <div class="col-8 ps-0 pt-2">4 Seats Left</div>
+                    </div>
+                </div>
+                <div class="col-3">
+                	<div class="row">
+                    	<div class="col-4 pe-0">  <img src="images/bag.svg" class="img-fluid mt-1"></div>
+                        <div class="col-8 ps-0 pt-2">25 Kg</div>
+                    </div>
+               </div>
+                <div class="col-3">
+                	<div class="row">
+                    	<div class="col-4 pe-0">  <img src="images/meals.svg" class="img-fluid"></div>
+                        <div class="col-8 ps-0 pt-2">Meals</div>
+                    </div>
+                </div>
+            </div>
+         </div>
+      </div>
+      
+      		<div class="row border-top pb-2 pt-3">
+           
+        	<div class="col-sm-3 col-3">
+        	<div class="row">
+            	<div class="col-4 pe-0"><img src="images/6e 1.png" class="img-fluid"></div>
+                <div class="col-8">
+                	<h6 class="fw-bold mb-0">Indigo</h6>
+                 <p class="small mb-0">6E-2009 </p>
+                 </div>
+            </div>
+   	   	
+        </div>
+        
+        	<div class="col-sm-9 col-5 p-0 ">
+      		<div class="row">
+            	<div class="col-2"><h5 class="mb-0 fw-normal">BOM</h5><p class="lead fw-bold mb-0">02:40</p></div>
+                <div class="col-7 text-center"><h6 class="mb-1 fw-normal">Non Stop</h6><p class="lead fw-bold mb-0">02h  10m</p></div>
+                <div class="col-3"><h5 class="mb-0 fw-normal">DEL</h5><p class="lead fw-bold mb-0">04:40</p></div>
+                
+            </div>
+      </div>
+      		
+            </div>
+        </div>
+        <div class="col-sm-2 pt-md-5">
+        
+        		
+            	<div class="text-center pt-md-3 pt-0 mb-2">
+                	<h4 class="mb-0 fw-bold"><i class="fa fa-inr" aria-hidden="true"></i> 3,703.00</h4>
+                    <p class="mb-0 small">Coupon</p>
+                </div>
+                <div class="text-center "><a href="#" id="list-drop-btn" class="btn btn-lg mt-1 btn-info border-0 text-white blue-bg rounded">View Fares</a><a href="#" id="ld-btn-hide" class="btn btn-lg mt-1 btn-info border-0 text-white gray-bg rounded" style="display:none;">Hide Fares</a></div>
+                
+            
+        </div>
+   
+    	
+      
+     
+    </div>
+    
+    
+     </div>
+    <div class="list-dtls-drop rounded" style="display:none;"  id="list-drop">
+     	<div class="list-drop-inner bg-white p-3 rounded border">
+     	<div class="row border-bottom list-drop-head pb-2 pt-2">
+        	<div class="col-sm-9 col-11">
+            	<div class="row">
+                	<div class="col-2 col-2 ps-md-2 pe-md-2 ps-2 pe-2 text-center"><div class="drop-icon-con"><img src="images/Group-icon.svg" class="img-fluid"></div><br>Type</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-2 pe-2 text-center"><div class="drop-icon-con"><img src="images/money1.svg" class="img-fluid"></div><br>Refund</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-2 pe-2 text-center"><div class="drop-icon-con"><img src="images/seat.svg" class="img-fluid"></div><br>Seat</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-2 pe-2 text-center"><div class="drop-icon-con"><img src="images/bag.svg" class="img-fluid"></div><br>Baggage</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-2 pe-2 text-center"><div class="drop-icon-con"><img src="images/meals.svg" class="img-fluid"></div><br>Meals</div>
+                </div>
+            </div>
+            
+            <div class="col-sm-3 col-1"></div>
+        </div>
+        <div class="row border-bottom list-drop-row pb-md-2 pb-2 pt-md-3 pt-1">
+        	<div class="col-sm-9 col-9 pe-0">
+            	<div class="row">
+                	<div class="col-sm-2 col-3 ps-md-0 pe-md-2 ps-1 pe-1 text-center fw-bold" style="line-height:18px;"><p class="mb-0">Offer Fare EMT</p></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center pt-2"><center><img src="images/tick.svg" class="img-fluid tick-ico"></center></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">6</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">15 KG</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">N/A</div>
+                </div>
+            </div>
+            
+            <div class="col-sm-3 col-3 p-0">
+            	<div class="row">
+                	<div class="col-sm-6 ps-0">
+                    	<h5 class="mb-0 mt-2 fw-bold"><i class="fa fa-inr" aria-hidden="true"></i> 3,703.00</h5>
+                    </div>
+                    <div class="col-sm-6 ps-0 position-relative"><a href="#" class="btn mt-1 global-btn border-0 text-white blue-bg">Book</a>
+                    <a href="#" data-tooltip="This is a tooltip"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="row border-bottom list-drop-row pb-md-2 pb-2 pt-md-3 pt-1">
+        	<div class="col-sm-9 col-9 pe-0">
+            	<div class="row">
+                	<div class="col-sm-2 col-3 ps-md-0 pe-md-2 ps-1 pe-1 text-center fw-bold" style="line-height:18px;"><p class="mb-0">Coupon</p></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center pt-2"><center><img src="images/tick.svg" class="img-fluid tick-ico"></center></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">6</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">15 KG</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">N/A</div>
+                </div>
+            </div>
+           
+            <div class="col-sm-3 col-3 p-0">
+            	<div class="row">
+                	<div class="col-sm-6 ps-0">
+                    	<h5 class="mb-0 mt-2 fw-bold"><i class="fa fa-inr" aria-hidden="true"></i> 3,703.00</h5>
+                    </div>
+                    <div class="col-sm-6 ps-0 position-relative"><a href="#" class="btn mt-1 global-btn border-0 text-white blue-bg">Book</a>
+                    <a href="#" data-tooltip="This is a tooltip"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="row border-bottom list-drop-row pb-md-2 pb-2 pt-md-3 pt-1">
+        	<div class="col-sm-9 col-9 pe-0">
+            	<div class="row">
+                	<div class="col-sm-2 col-3 ps-md-0 pe-md-2 ps-1 pe-1 text-center fw-bold" style="line-height:18px;"><p class="mb-0">SME</p></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center pt-2"><center><img src="images/tick.svg" class="img-fluid tick-ico"></center></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">6</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">15 KG</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">N/A</div>
+                </div>
+            </div>
+           
+            <div class="col-sm-3 col-3 p-0">
+            	<div class="row">
+                	<div class="col-sm-6 ps-0">
+                    	<h5 class="mb-0 mt-2 fw-bold"><i class="fa fa-inr" aria-hidden="true"></i> 3,703.00</h5>
+                    </div>
+                    <div class="col-sm-6 ps-0 position-relative"><a href="#" class="btn mt-1 global-btn border-0 text-white blue-bg">Book</a>
+                    <a href="#" data-tooltip="This is a tooltip"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="row border-bottom list-drop-row pb-md-2 pb-2 pt-md-3 pt-1">
+        	<div class="col-sm-9 col-9 pe-0">
+            	<div class="row">
+                	<div class="col-sm-2 col-3 ps-md-0 pe-md-2 ps-1 pe-1  text-center fw-bold" style="line-height:18px;"><p class="mb-0">MAIN</p></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center pt-2"><center><img src="images/tick.svg" class="img-fluid tick-ico"></center></div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">6</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">15 KG</div>
+                    <div class="col-2 ps-md-2 pe-md-2 ps-1 pe-1 text-center fw-bold pt-2">N/A</div>
+                </div>
+            </div>
+           
+            <div class="col-sm-3 col-3 p-0">
+            	<div class="row">
+                	<div class="col-sm-6 ps-0">
+                    	<h5 class="mb-0 mt-2 fw-bold"><i class="fa fa-inr" aria-hidden="true"></i> 3,703.00</h5>
+                    </div>
+                    <div class="col-sm-6 ps-0 position-relative"><a href="#" class="btn mt-1 global-btn border-0 text-white blue-bg">Book</a>
+                    <a href="#" data-tooltip="This is a tooltip"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+        
+     </div>
+     
+     
+   
+</div> 
+
+	
+     
+    </div>
+</div>
+
+
+     
+</div>
+</section>
+<div class="footer pt-md-4 pt-2 pb-3">
+	<div class="container pt-3 pb-0">
+    	<div class="row">
+                	<div class="col-sm-3 col-6 mb-3">
+                    	<h5>Our Company</h5>
+                        <ul>
+                        	<li><a href="#">Contact US</a></li>
+							<li><a href="#">Bank Details</a></li>
+							<li><a href="#">About US</a></li>
+							<li><a href="#">Terms &amp; Condition</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col-6 mb-3">
+                    	<h5>Our Company</h5>
+                        <ul>
+                        	<li><a href="#">Contact US</a></li>
+							<li><a href="#">Bank Details</a></li>
+							<li><a href="#">About US</a></li>
+							<li><a href="#">Terms &amp; Condition</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col-6 mb-3">
+                    	<h5>Our Company</h5>
+                        <ul>
+                        	<li><a href="#">Contact US</a></li>
+							<li><a href="#">Bank Details</a></li>
+							<li><a href="#">About US</a></li>
+							<li><a href="#">Terms &amp; Condition</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col-6">
+                    	<h5>Keep in Touch</h5>
+                        <div class="d-flex social-con">
+                        	<a href="#"><img src="images/facebook-icon.svg" class="img-fluid"></a>
+                            <a href="#"><img src="images/twitter-icon.svg" class="img-fluid"></a>
+                            <a href="#"><img src="images/instagram-icon.svg" class="img-fluid"></a>
+                            <a href="#"><img src="images/whatsapp-icon.svg" class="img-fluid"></a>
+                           <a href="#"><img src="images/youtube-icon.svg" class="img-fluid"></a>
+                        </div>
+                    </div>
+                </div>
+        <div class="text-center text-white small pt-4">Copyright 2023 by EarnMyTravel. All rights reserved.</div>
+    
+    </div>
+    
+</div>
+
+
+  <script src="js/jquery.min.js"></script> 
+<script src="js/bootstrap.min.js"></script>
+<script src="js/popper.min.js"></script>  
+ <script src="js/jquery-ui.js"></script>
+
+ <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+
+<script src="js/slick.min.js"></script>
+<script src="js/custom.js"></script>
+
+   
+
+  </body>
+</html>

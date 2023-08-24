@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Earn My Travel</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/animate.min.css" rel="stylesheet">
+      <link href="css/slick.css" rel="stylesheet">
+      <link href="css/slick-theme.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+   
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-white fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><img src="images/earn-my-travel-logo.jpg" ></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+
+
+   
+<section class="pt-3 pb-5 flight-search-bg">
+	<div class="container mt-5">
+    	<div class="bg-white rounded-3 shadow-lg">
+        	
+            <div class="rounded">
+            	<div class="row">
+                <div class="col-sm-6  pe-0"><img src="images/flight-search-img.jpg" class="img-fluid rounded-start"></div>
+                	<div class="col-sm-6 ps-0">
+                    
+                    	<div class="p-4">
+                    	<h4 class="mb-3 fw-bold">Search and Book Flight of Your Choice</h4>
+                        <div class="row search-toggle mb-2 m-0">
+                            <ul>
+                                <li class="active"><a href="#" id="oneway" class="fw-bold">Oneway</a></li>
+                                <li ><a href="#" id="roundtrip" class="fw-bold">Roundtrip</a></li>
+                               
+                            </ul>
+                       </div>
+                        <div class="row mb-3 mt-3">
+                        	<div class="col-sm-6">
+                            	<label class="fw-bold">From</label>
+                            	<input name="" type="text" class="form-control" placeholder="Travelling from">
+                            </div>
+                            <div class="col-sm-6">
+                            	<label class="fw-bold">To</label>
+                            	<input name="" type="text" class="form-control" placeholder="Travelling to">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                        	<div class="col-sm-6">
+                            	<label class="fw-bold">Departure</label>
+                            	<input name="" type="text" class="form-control" placeholder="Departure date">
+                            </div>
+                            <div class="col-sm-6">
+                            	<label class="fw-bold">Return</label>
+                            	<input name="" type="text" id="returntxt" class="form-control" placeholder="Return date">
+                            </div>
+                        </div>
+                         <div class="row mb-3">
+                        	<div class="col-sm-6 position-relative">
+                            	<label class="fw-bold">Travellers</label>
+                            	<input name="" type="text" class="form-control" id="trav-click" placeholder="Travellers">
+                                
+                                <div class="traveller-pop shadow">
+                        	<div class="row g-1">
+                            	<div class="col-4">
+                                	<label class="mb-1"><strong>Adults</strong></label>
+                                     <select class="form-control mb-3">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                	<label class="mb-1"><strong>Children</strong></label>
+                                     <select class="form-control">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                	<label class="mb-1"><strong>Infants</strong></label>
+                                     <select class="form-control">
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                    </select>
+                                </div>
+                            </div>
+                        	
+                            <a class="nav-link btn btn-sm global-btn text-white pt-1 pb-1 rounded-3 mt-2 mb-3" id="trav-submit" href="#">Submit</a>
+                        </div>
+                            </div>
+                            <div class="col-sm-6">
+                            	<label class="fw-bold">Class</label>
+                               <select class="form-control" data-val="true" data-val-required="Please Select Class" id="ddl_class" name="Class"><option selected="selected" value="Y">Economy</option>
+                                        <option value="W">Premium Economy</option>
+                                        <option value="C">Business</option>
+                                        <option value="F">First Class</option>
+                                    </select>
+                            </div>
+                           
+                        </div>
+                        
+                        <div align="right">
+                       	  <button class="btn global-btn ">Search Flights</button>
+                        </div>
+                        
+                        </div>
+                  </div>
+                     
+                </div>
+           
+            
+           
+            </div>
+        </div>
+    </div> 
+</section>
+
+<section class="pt-4 pb-4">
+	<div class="container">
+    	<h2 class="text-center mt-3 mb-4">Exclusive Flight Booking Deals</h2>
+        <div class="row">
+        	<div class="col-sm-4">
+            	<div class="card">
+                  <img src="images/f-deal-1.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Grab Huge Discount on Travel</h5>
+                    <p class="card-text">To avail the discount, users have to boo...</p>
+                    <a href="#" class="btn btn-sm  global-btn" style="font-size:14px;">Read More..</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+            	<div class="card">
+                  <img src="images/f-deal-2.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Get Discount up to 35% on Booking Flight Tickets</h5>
+                    <p class="card-text">To avail discounts, users have to book f..</p>
+                    <a href="#" class="btn btn-sm  global-btn" style="font-size:14px;">Read More..</a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+            	<div class="card">
+                  <img src="images/f-deal-3.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Embark on the journey of your lifetime</h5>
+                    <p class="card-text">Embark on the journey of your lifetime, ...</p>
+                    <a href="#" class="btn btn-sm  global-btn" style="font-size:14px;">Read More..</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="footer pt-md-4 pt-2 pb-3">
+	<div class="container pt-3 pb-0">
+    	<div class="row">
+                	<div class="col-sm-3 col-6 mb-3">
+                    	<h5>Our Company</h5>
+                        <ul>
+                        	<li><a href="#">Contact US</a></li>
+							<li><a href="#">Bank Details</a></li>
+							<li><a href="#">About US</a></li>
+							<li><a href="#">Terms &amp; Condition</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col-6 mb-3">
+                    	<h5>Our Company</h5>
+                        <ul>
+                        	<li><a href="#">Contact US</a></li>
+							<li><a href="#">Bank Details</a></li>
+							<li><a href="#">About US</a></li>
+							<li><a href="#">Terms &amp; Condition</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col-6 mb-3">
+                    	<h5>Our Company</h5>
+                        <ul>
+                        	<li><a href="#">Contact US</a></li>
+							<li><a href="#">Bank Details</a></li>
+							<li><a href="#">About US</a></li>
+							<li><a href="#">Terms &amp; Condition</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col-6">
+                    	<h5>Keep in Touch</h5>
+                        <div class="d-flex social-con">
+                        	<a href="#"><img src="images/facebook-icon.svg" class="img-fluid"></a>
+                            <a href="#"><img src="images/twitter-icon.svg" class="img-fluid"></a>
+                            <a href="#"><img src="images/instagram-icon.svg" class="img-fluid"></a>
+                            <a href="#"><img src="images/whatsapp-icon.svg" class="img-fluid"></a>
+                           <a href="#"><img src="images/youtube-icon.svg" class="img-fluid"></a>
+                        </div>
+                    </div>
+                </div>
+        <div class="text-center text-white small pt-4">Copyright 2023 by EarnMyTravel. All rights reserved.</div>
+    
+    </div>
+    
+</div>
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/custom.js"></script>
+   
+
+  </body>
+</html>
