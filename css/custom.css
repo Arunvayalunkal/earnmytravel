@@ -214,6 +214,20 @@ a:hover{
 	font-size:14px;
 	margin-top:-8px;
 }
+.dashboard-nav{
+	height:100%;
+}
+.dashboard-nav a{
+	color:#000;
+}
+.dashboard-nav a:hover{
+	background-color:#EDF3FC;
+	color:#000 !important;
+	font-weight:600;
+}
+.table td{
+	font-size:13px;
+}
 @media (max-width:480px)  {
 	.spec-bx{
 	min-height:330px;
